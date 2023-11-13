@@ -1,0 +1,20 @@
+#!/bin/bash
+# bash aliases
+activate() { if  ! [[ -d ./venv ]]; then
+                echo "Not in a project directory "
+                return
+            else
+                source ~/.venv.d/pre-activate
+                source venv/bin/activate
+                source ~/.venv.d/post-activate
+                # rename the deactivate function
+                eval "$(echo "deactivate_zqxp()"; declare -f deactivate | tail -n +2)"
+                # note: in subshells use ( vs {
+                deactivate () {
+                    source ~/.venv.d/pre-deactivate
+                    deactivate_zqxp
+                    unset -f deactivate_zqxp
+                    source ~/.venv.d/post-deactivate
+                }
+            fi ;
+            }

@@ -1,0 +1,6 @@
+#!/bin/bash
+#  commands to execute after activating a venv virtual environment
+# export PROJECT_DIR="${VIRTUAL_ENV%/venv}"
+# alias pylint='"${VIRTUAL_ENV}/bin/python" /usr/bin/pylint'
+echo system post activate
+[[ -f "${VIRTUAL_ENV}/post-activate" ]] && source "${VIRTUAL_ENV}/post-activate"

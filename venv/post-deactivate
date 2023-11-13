@@ -1,0 +1,3 @@
+#!/bin/bash
+# execute project specific commands after deactivation
+echo project post deactivate

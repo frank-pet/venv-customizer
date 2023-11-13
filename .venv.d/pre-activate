@@ -1,0 +1,3 @@
+#!/bin/bash
+# bash commands to execute prior to activating the venv
+echo system pre activate

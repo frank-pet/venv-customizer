@@ -1,0 +1,3 @@
+#!/bin/bash
+# execute project specific commands after activation
+echo project post activate

@@ -1,0 +1,5 @@
+#!/bin/bash
+#  commands to execute before deactivating a virtual environment
+# unset PROJECT_DIR
+# unalias pylint
+echo system pre deactivate
